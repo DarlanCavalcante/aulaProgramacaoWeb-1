@@ -17,15 +17,91 @@ body {
 /* ==========================
    Header e Navegação
    ========================== */
+   :root {
+    --header-height: 72px;
+}
+
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 1rem 0;/*16px*/
+    background: linear-gradient(135deg, rgba(6,76,216,0.9) 0%, #00ffd0 100%);
+    color: #fff;
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+/* Ajustes para a logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+
+/* Se sua logo for uma imagem */
+.logo img {
+    height: calc(var(--header-height) - 16px);
+    max-height: 56px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Navegação alinhada à direita no desktop */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 0.5rem;
+}
+
+/* Comportamento responsivo: centraliza logo e esconde/empilha nav */
+@media (max-width: 7px) {
+    header {
+        padding: 0 0.75rem;
+    }
+
+    .logo {
+        justify-content: center;
+        flex: 1 1 auto;
+    }
+
+    header nav {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, rgba(6,76,216,0.95) 0%, #764ba2 100%);
+        padding: 0.5rem 1rem;
+        transform: translateY(-999px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.22s ease;
+    }
+
+    /* Ao adicionar a classe .nav-open no header (via JS) a nav aparece */
+    header.nav-open nav {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
 }
 
 
@@ -35,7 +111,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;/*32px*/
+    padding: 0 2rem;
 }
 
 
@@ -47,7 +123,8 @@ nav {
 
 nav ul {
     display: flex;
-    list-style: none;
+    display: flex;
+    list-style: outside none;
     gap: 2rem;
 }
 
