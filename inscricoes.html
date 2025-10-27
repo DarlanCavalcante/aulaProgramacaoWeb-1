@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastros de Voluntários</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">&#128153; Voluntários</div>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <ul id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html">Projetos</a></li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-page">
+    <h1>Cadastros de Voluntários</h1>
+    <p>Visualize, filtre e exporte os cadastros armazenados neste navegador.</p>
+  </section>
+
+  <main class="about" id="volunteersApp">
+    <div class="cta-buttons" style="justify-content: flex-start; gap: .75rem;">
+      <button class="btn-primary" type="button" onclick="downloadCSV()">Exportar CSV</button>
+      <button class="btn-secondary" type="button" onclick="clearVolunteers(); renderVolunteers();">Limpar Cadastros</button>
+    </div>
+
+    <div class="filters" style="margin: 1rem 0; display: grid; gap: .75rem; grid-template-columns: 1fr;">
+      <input id="searchInput" type="search" placeholder="Buscar por nome, e-mail ou telefone" aria-label="Buscar" />
+      <div style="display: grid; gap: .75rem; grid-template-columns: 1fr 1fr;">
+        <select id="filterArea" aria-label="Filtrar por área de interesse">
+          <option value="">Todas as áreas</option>
+        </select>
+        <select id="filterDisp" aria-label="Filtrar por disponibilidade">
+          <option value="">Todas as disponibilidades</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="table" aria-describedby="count">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Idade</th>
+            <th>Disponibilidade</th>
+            <th>Área</th>
+            <th>Experiência</th>
+            <th>Motivação</th>
+            <th>Criado Em</th>
+          </tr>
+        </thead>
+        <tbody id="volunteersTbody">
+          <tr><td colspan="9" style="text-align:center;">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p id="count" style="margin-top: .75rem;">0 cadastro(s) encontrado(s).</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Organização de Voluntários. Todos os direitos reservados.</p>
+    <p>Feito com &#10084;&#65039; para transformar vidas</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

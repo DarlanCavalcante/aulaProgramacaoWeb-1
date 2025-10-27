@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -11,11 +12,15 @@
     <header>
         <nav>
             <div class="logo">💙 Voluntários</div>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
             <ul id="navMenu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projeto.html" class="active">Projetos</a></li>
-                <li><a href="cadastro.html">Seja Voluntário</a></li>
+                <li><a href="cadastro.html"><span class="nowrap">Seja Voluntário</span></a></li>
             </ul>
         </nav>
     </header>
@@ -30,10 +35,10 @@
 
     <!-- Sobre o Projeto -->
     <section class="about">
-        <h2>Como Funciona</h2>
+    <h2><span class="nowrap">Como Funciona</span></h2>
         <p>Nossos projetos de voluntariado conectam pessoas dispostas a ajudar com famílias e comunidades que precisam de apoio. Cada projeto é planejado para atender necessidades específicas, seja em educação, saúde, inclusão social ou atividades culturais.</p>
 
-        <h2>Para Que Serve</h2>
+    <h2><span class="nowrap">Para Que Serve</span></h2>
         <p>O objetivo dos nossos projetos é promover a inclusão social, gerar oportunidades e criar um impacto positivo na vida de quem mais precisa. Além disso, incentivamos a participação da comunidade e fortalecemos os vínculos entre voluntários e beneficiários.</p>
 
         <div class="impact-cards">
@@ -55,14 +60,31 @@
         </div>
     </section>
 
+    <!-- Galeria de Imagens dos Projetos -->
+    <section class="gallery" aria-label="Galeria de fotos de projetos">
+        <div class="gallery-grid">
+            <img src="imagem/voluntario.jpg" alt="Voluntário apoiando atividade comunitária" loading="lazy">
+            <img src="imagem/teste.jpg" alt="Equipe de voluntários durante ação solidária" loading="lazy">
+            <img src="imagem/cadeirante.jpg" alt="Voluntário apoiando pessoa cadeirante" loading="lazy">
+            <img src="imagem/doaçaocomida.jpg" alt="Doação de alimentos para famílias" loading="lazy">
+            <img src="imagem/doaçaocomida2.jpg" alt="Cestas básicas sendo distribuídas" loading="lazy">
+            <img src="imagem/doaçaocomida3.jpg" alt="Entrega de alimentos em ação social" loading="lazy">
+            <img src="imagem/doaçãoroupas.jpg" alt="Doação de roupas para comunidade" loading="lazy">
+            <img src="imagem/donations.jpg" alt="Caixa de doações organizada por voluntários" loading="lazy">
+            <img src="imagem/voluntario4.jpg" alt="Voluntários trabalhando em equipe" loading="lazy">
+            <img src="imagem/voluntariohomem.jpg" alt="Voluntário em atividade comunitária" loading="lazy">
+            <img src="imagem/voluntarios.jpg" alt="Grupo de voluntários reunidos" loading="lazy">
+        </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="cta">
         <div class="cta-content">
             <h2>Participe dos Nossos Projetos</h2>
             <p>Seja voluntário e faça parte dessa transformação!</p>
             <div class="cta-buttons">
-                <a href="cadastro.html" class="btn-primary">Cadastre-se</a>
-                <a href="index.html" class="btn-secondary">Voltar ao Início</a>
+                <a href="cadastro.html" class="btn-primary"><span class="nowrap">Cadastre-se</span></a>
+                <a href="index.html" class="btn-secondary"><span class="nowrap">Voltar ao Início</span></a>
             </div>
         </div>
     </section>
@@ -71,8 +93,8 @@
     <section class="contact">
         <h2>Fale Conosco</h2>
         <address>
-            <p>📍 <strong>Endereço:</strong> Passagem Bingo, 123 - Bom Clima, São Paulo/SP</p>
-            <p>📞 <strong>Telefone:</strong> (11) 99999-9999</p>
+            <p>📍 <strong>Endereço:</strong> Passagem Bingo, 123 - Bom Clima, <span class="nowrap">São Paulo/SP</span></p>
+            <p>📞 <strong>Telefone:</strong> <span class="nowrap">(11) 99999-9999</span></p>
             <p>✉️ <strong>E-mail:</strong> contato@organizacaovoluntario.org</p>
         </address>
     </section>
